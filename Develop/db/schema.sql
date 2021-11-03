@@ -35,8 +35,8 @@ CREATE TABLE employee
   Hiredate DATETIME NOT NULL,
   Dateofbirth DATETIME NOT NULL,
   Linkedin VARCHAR(45) NULL,
-  FacebookAccount VARCHAR(45) NULL,
-  TwitterAccount VARCHAR(45) NULL,
+  Facebookaccount VARCHAR(45) NULL,
+  Twitteraccount VARCHAR(45) NULL,
   Address_id INT NOT NULL,
   PRIMARY KEY (employee_id),
   FOREIGN KEY (Address_id) REFERENCES address(Address_id)

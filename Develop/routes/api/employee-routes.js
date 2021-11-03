@@ -13,15 +13,15 @@ router.get("/", (req, res) => {
     });
 });
 
-/*router.get("/:id", (req, res) => {
+router.get("/:id", (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
-  Category.findOne({
-    where: { id: req.params.id },
+  Employee.findOne({
+    where: { employee_id: req.params.id },
     include: [
       {
-        model: Product,
-        attributes: ["id", "product_name", "price"],
+        model: employee,
+        attributes: ["Firstname", "Lastname", "Title"],
       },
     ],
   })
@@ -37,7 +37,7 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post("/", (req, res) => {
+/* router.post("/", (req, res) => {
   // create a new category
   Category.create({
     category_name: req.params.category_name,
