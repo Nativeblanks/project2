@@ -1,16 +1,16 @@
 // import all models
 //const Post = require('./Post');
 //const User = require('./User');
-const Employee = require('./Employee');
-const Address = require('./Address');
+const Employee = require("./employee");
+const Address = require("./address");
 
 // create associations
 Address.hasMany(Employee, {
-  foreignKey: 'address_id'
+  foreignKey: "address_id",
 });
 
 Employee.belongsTo(Address, {
-  foreignKey: 'address_id'
+  foreignKey: "address_id",
 });
 /*
 User.belongsToMany(Post, {
@@ -59,4 +59,3 @@ Post.hasMany(Comment, {
 */
 
 module.exports = { Employee, Address };
-

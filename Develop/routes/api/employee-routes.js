@@ -14,16 +14,9 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  // find one category by its `id` value
-  // be sure to include its associated Products
   Employee.findOne({
     where: { employee_id: req.params.id },
-    include: [
-      {
-        model: employee,
-        attributes: ["Firstname", "Lastname", "Title"],
-      },
-    ],
+    attributes: ["Firstname", "Lastname", "Title"],
   })
     .then((dbData) => {
       if (!dbData) {
