@@ -5,8 +5,8 @@ Address.init(
   {
       Address_id: {type: DataTypes.INTEGER, allowNull: false, primaryKey: true, autoIncrement: true}
     , Organization: {type: DataTypes.STRING, allowNull: false}
-    , AddressLine1: {type: DataTypes.STRING, allowNull: false}
-    , AddressLine2: {type: DataTypes.STRING, allowNull: true}
+    , Addressline1: {type: DataTypes.STRING, allowNull: false}
+    , Addressline2: {type: DataTypes.STRING, allowNull: true}
     , City: {type: DataTypes.STRING, allowNull: false}
     , State: {type: DataTypes.STRING, allowNull: false}
     , Zip: {type: DataTypes.STRING, allowNull: false}
