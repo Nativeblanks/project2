@@ -1,11 +1,7 @@
 const router = require("express").Router();
 const { Employee, Address } = require("../../models");
 
-// The `/api/categories` endpoint
-
 router.get("/", (req, res) => {
-  // find all categories
-  // be sure to include its associated Products
   Employee.findAll({})
     .then((dbData) => res.json(dbData))
     .catch((err) => {
@@ -30,10 +26,20 @@ router.get("/:id", (req, res) => {
     });
 });
 
-/* router.post("/", (req, res) => {
-  // create a new category
-  Category.create({
-    category_name: req.params.category_name,
+router.post("/", (req, res) => {
+  Employee.create({
+    Firstname: req.body.Firstname,
+    Lastname: req.body.Lastname,
+    Title: req.body.Title,
+    Phone: req.body.Phone,
+    Cell: req.body.Cell,
+    Email: req.body.Email,
+    Hiredate: req.body.Hiredate,
+    Dateofbirth: req.body.Dateofbirth,
+    Linkedin: req.body.Linkedin,
+    Facebookaccount: req.body.Facebookaccount,
+    Twitteraccount: req.body.Twitteraccount,
+    Address_id: req.body.Address_id,
   })
     .then((dbData) => res.json(dbData))
     .catch((err) => {
@@ -42,17 +48,29 @@ router.get("/:id", (req, res) => {
 });
 
 router.put("/:id", (req, res) => {
-  // update a category by its `id` value
-  Category.update(
-    { category_name: req.params.category_name },
-    { where: { id: req.params.id } }
+  Employee.update(
+    {
+      Firstname: req.body.Firstname,
+      Lastname: req.body.Lastname,
+      Title: req.body.Title,
+      Phone: req.body.Phone,
+      Cell: req.body.Cell,
+      Email: req.body.Email,
+      Hiredate: req.body.Hiredate,
+      Dateofbirth: req.body.Dateofbirth,
+      Linkedin: req.body.Linkedin,
+      Facebookaccount: req.body.Facebookaccount,
+      Twitteraccount: req.body.Twitteraccount,
+      Address_id: req.body.Address_id,
+    },
+    { where: { employee_id: req.params.id } }
   )
-    .then((dbCategoryData) => {
-      if (!dbCategoryData) {
+    .then((dbData) => {
+      if (!dbData) {
         res.status(404).json({ message: "NO DATA FOUND" });
         return;
       }
-      res.json(dbCategoryData);
+      res.json(dbData);
     })
     .catch((err) => {
       console.log(err);
@@ -60,20 +78,19 @@ router.put("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  // delete a category by its `id` value
-  Category.destroy({
-    where: { id: req.params.id },
+  Employee.destroy({
+    where: { employee_id: req.params.id },
   })
-    .then((dbCategoryData) => {
-      if (!dbCategoryData) {
+    .then((dbData) => {
+      if (!dbData) {
         res.status(404).json({ message: "NO DATA FOUND" });
         return;
       }
-      res.json(dbCategoryData);
+      res.json(dbData);
     })
     .catch((err) => {
       console.log(err);
     });
 });
-*/
+
 module.exports = router;
