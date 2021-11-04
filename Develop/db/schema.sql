@@ -13,8 +13,8 @@ CREATE TABLE address
 (
   Address_id INTEGER NOT NULL AUTO_INCREMENT,
   Organization varchar(64) NOT NULL, 
-  AddressLine1 VARCHAR(45) NOT NULL,
-  AddressLine2 VARCHAR(45) NULL,
+  Addressline1 VARCHAR(45) NOT NULL,
+  Addressline2 VARCHAR(45) NULL,
   City VARCHAR(45) NOT NULL,
   State VARCHAR(2) NOT NULL,
   Zip VARCHAR(10) NOT NULL,
