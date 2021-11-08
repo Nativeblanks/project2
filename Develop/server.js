@@ -27,21 +27,23 @@ const employeeData = [
   }
 ]
 
-app.get('/all-employees', (req, res) => {
-  // Handlebars requires an object to be sent to the index.handlebars file.
-  const data = {
-    employeeData: []
-  };
-  // Loop through the animals, and send those that are pets to the index handlebars file.
-  for (let i = 0; i < employeeData.length; i++) {
-    // Get the current animal.
-    let currentEmployee = employeeData[i];
-    data.employeedata.push(currentEmployee)
-  }
-  
-  res.render('cards', data);
-});
 
+
+
+// app.get('/all-employees', (req, res) => {
+//   // Handlebars requires an object to be sent to the index.handlebars file.
+//   const data = {
+//     employeeData: []
+//   };
+//   // Loop through the animals, and send those that are pets to the index handlebars file.
+//   for (let i = 0; i < employeeData.length; i++) {
+//     // Get the current animal.
+//     let currentEmployee = employeeData[i];
+//     data.employeedata.push(currentEmployee)
+//   }
+  
+//   res.render('cards', data);
+// });
 
 
 sequelize.sync({ force: false }).then(() => {
