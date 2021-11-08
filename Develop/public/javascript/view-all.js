@@ -1,11 +1,11 @@
 function viewall (event) {
-    // event.preventDefault();
+    event.preventDefault();
     console.log("view all button pressed")
-    // const response = fetch(`/api/employee`) , {
-    //     method: 'PUT',
-    //     body:
+    const response = fetch(`/api/employee`) , {
+        method: 'PUT',
+        body:
 
-    // }
+    }
     
 
 }
