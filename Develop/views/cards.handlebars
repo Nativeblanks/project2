@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>List</title>
 </head>
 <body>
     <div class="card">
@@ -15,16 +16,18 @@
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
             {{#each employeeData}}
-  <li>
-    <p>First Name: {{firstName}}</p>
-    <p>Last Name: {{lastName}}</p>
-    <p>Title: {{title}}</p>
-  </li>
-  {{/each}}
+            <li>
+              <p>First Name: {{firstName}}</p>
+              <p>Last Name: {{lastName}}</p>
+              <p>Title: {{title}}</p>
+            </li>
+            {{/each}}
           </p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
     
 </body>
+
+  <script src="/javascript/view-all.js"></script>
 </html>
