@@ -21,6 +21,7 @@ router.post('/', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
+  console.log(req.body)
   // expects {email: 'lernantino@gmail.com', password: 'password1234'}
   User.findOne({
     where: {
@@ -31,19 +32,16 @@ router.post('/login', (req, res) => {
       res.status(400).json({ message: 'No user with that email address!' });
       return;
     }
+if(req.body.password === dbUserData.password){
+  req.session.save(() => {
+    req.session.loggedIn = true;
 
-    const validPassword = dbUserData.checkPassword(req.body.password);
-
-    if (!validPassword) {
-      res.status(400).json({ message: 'Incorrect password!' });
-      return;
-    }
-
-    req.session.save(() => {
-      req.session.loggedIn = true;
-  
-      res.json({ user: dbUserData, message: 'You are now logged in!' });
-    });
+    res.json({dbUserData, message: 'You are now logged in!' });
+  });
+}
+else{
+  res.sendStatus(401);
+}    
   });
 });
 
