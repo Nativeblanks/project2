@@ -15,7 +15,9 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
-
+router.get('/addform', (req, res) => {
+  res.render('addform')
+});
 
 
 module.exports = router;

@@ -1,49 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>Employee Card Tracker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Card Tracker</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
-
-
 <body>
+  <div class="wrapper">
     <header>
+        <a href="/employees">View Employees</a>
       <nav>
-      <a href="/login">login</a>
+        {{#if loggedIn}}
+        <a href="/addform">Add Employee</a>
+        <button id="logout" class="btn-no-style">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
       </nav>
-      </header>
-      <div class="wrapper">
-      <h2>Welcome to the Employee Card Tracker Database</h2>
-      <h4>What would you like to do?</h4>
-        <nav>
-        <ol>
-            <li>
-              <button id="view-all"> View all Employees </button>
-            </li>
-            <li>
-              <label for="department">View employees by department</label>
-                <select name="deparment" id="department">
-                <option value="Human Resources">Human Resources</option>
-                <option value="Finance">Finance</option>
-                <option value="Technology">Technology</option>
-                <option value="Legal">Legal</option>
-            </select>
-            </li>
-            <li><button id="add-employee">Add Employee</button></li>
-            <li><button id="delete-employee">Delete Employee</button><li>
-        </ol>  
-        </nav>
     </header>
-
-        <main>
-            {{{body}}}
-        </main>
-      </div>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      Thanks for visiting!
+    </footer>
+  </div>
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 </body>
 
- <script src="/javascript/view-all.js"></script>
 </html>
