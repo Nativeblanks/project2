@@ -4,7 +4,7 @@ const { Employee, Address } = require("../../models");
 router.get("/", (req, res) => {
   Employee.findAll({})
   .then(dbPostData => {
-    res.render('employees', dbPostData[0]);
+   res.render('employees', dbPostData[0]);
   })
     .catch((err) => {
       console.log(err);
