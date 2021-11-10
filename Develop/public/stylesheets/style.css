@@ -8,9 +8,25 @@ body, html {
 a {
   color: white;
 }
+
 a:hover {
   color: yellow;
 }
+
+a.black {
+  color: black;
+  font-size:smaller;
+}
+
+.card-color {
+  background-image: linear-gradient(to right, #940000, red);  
+  color: white;
+}
+
+a.black:hover {
+  font-weight: bold;
+}
+
 .header-div {
   color: white;
 }
@@ -32,7 +48,7 @@ header {
   background-image: linear-gradient(to right, #940000, red);
 }
 .myLogin {
-  padding: 50pt;
+  padding: 20pt;
 }
 footer {
   background: #ccc;
