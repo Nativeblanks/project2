@@ -2,9 +2,19 @@ const router = require("express").Router();
 const { Employee, Address } = require("../../models");
 
 router.get("/", (req, res) => {
-  Employee.findAll({})
+  Employee.findAll({
+    attributes: [
+      'Firstname',
+      'Lastname',
+      'Title'
+    ]
+  })
   .then(dbPostData => {
-   res.render('employees', dbPostData[0]);
+
+    const emps = dbPostData.map(employee => employee.get({ plain: true }));
+      console.log(emps[0])
+    res.render('employees', {
+
   })
     .catch((err) => {
       console.log(err);
