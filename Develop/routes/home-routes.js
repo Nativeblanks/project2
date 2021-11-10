@@ -8,14 +8,21 @@ router.get('/', (req, res) => {
 });
 
 router.get('/employees', (req,res) => {
-   fetch('/api/employee')
-   .then(response => { return response.json() })
+  //  fetch('/api/employee')
+  //  .then(response => { return response.json() })
   
-  const employeeData = {
-    employees: employees
-  }
-  res.render('employees', employeeData);
-})
+  // const employeeData = {
+  //   employees: employees
+  // }
+  Employee.findAll({}).then(dbPostData => {
+    res.render('employees', dbPostData[0].get({ plain:true}));
+  })
+  .catch(err => {
+    console.log(err);
+  })
+  console.log(dbPostData[0])
+  })
+    
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
