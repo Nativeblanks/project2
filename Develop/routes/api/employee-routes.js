@@ -22,7 +22,7 @@ router.get("/:id", (req, res) => {
         return;
       }
       res.json(dbData);
-    })
+       })
     .catch((err) => {
       console.log(err);
     });
