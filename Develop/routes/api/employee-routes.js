@@ -4,6 +4,12 @@ const { Employee, Address } = require("../../models");
 router.get("/", (req, res) => {
   Employee.findAll({})
     .then((dbData) => res.json(dbData))
+    .then(dbData => {
+      const employee = dbData.map(employee => employee.get({ plain: true }));
+      res.render('employees',{
+        employee
+      })
+    })
     .catch((err) => {
       console.log(err);
     });
@@ -20,7 +26,7 @@ router.get("/:id", (req, res) => {
         return;
       }
       res.json(dbData);
-    })
+       })
     .catch((err) => {
       console.log(err);
     });
