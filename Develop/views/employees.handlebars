@@ -15,18 +15,10 @@
           <p class="card-text">
             Full list of employees below
 
-            {{#each employees as |employee|}}
-
+            {{#each emps as |emp|}}
+             <li> {{Firstname}} {{Lastname}} {{Title}}</li>
             {{/each}}
             
-            
-            {{!-- {{#each employee}}
-            <li>
-              <p>First Name: {{Firstname}}</p>
-              <p>Last Name: {{Lastname}}</p>
-              <p>Title: {{Title}}</p>
-            </li>
-            {{/each}} --}}
           </p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
