@@ -3,46 +3,37 @@ body, html {
   margin: 0;
   font-family: sans-serif;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
-
 a {
   color: white;
 }
-
 a:hover {
   color: yellow;
 }
-
 .header-div {
-  color:white;
+  color: white;
 }
-
 .header-text {
   color: white;
 }
-
 ol {
   list-style-type: none;
 }
-
-li{
+li {
   padding-bottom: 5px;
 }
-
 header {
   border-bottom: 1px solid #ccc;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-image: linear-gradient(to right, #940000, red);  
+  background-image: linear-gradient(to right, #940000, red);
 }
-
 .myLogin {
   padding: 50pt;
 }
-
 footer {
   background: #ccc;
   padding: 10px;
@@ -54,13 +45,11 @@ footer {
   left: 0;
   bottom: 0;
 }
-
 .footer-text {
   font-size: 8pt;
   font-weight: normal;
   vertical-align: middle;
 }
-
 .card {
   flex-direction: row;
   align-items: center;
@@ -72,6 +61,20 @@ footer {
   width: 30%;
   border-top-right-radius: 0;
   border-bottom-left-radius: calc(0.25rem - 1px);
+}
+@media only screen and (max-width: 768px) {
+  a {
+    display: none;
+  }
+  .card-body {
+    padding: 0.5em 1.2em;
+  }
+  .card-body .card-text {
+    margin: 0;
+  }
+  .card img {
+    width: 50%;
+  }
 }
 @media only screen and (max-width: 768px) {
   a {
