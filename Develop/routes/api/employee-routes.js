@@ -3,10 +3,12 @@ const { Employee, Address } = require("../../models");
 
 router.get("/", (req, res) => {
   Employee.findAll({})
-    .then((dbData) => res.json(dbData))
+  .then(dbPostData => {
+    res.render('employees', dbPostData[0]);
+  })
     .catch((err) => {
       console.log(err);
-    });
+    })
 });
 
 router.get("/:id", (req, res) => {
