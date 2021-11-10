@@ -7,11 +7,16 @@ router.get('/', (req, res) => {
   res.render('homepage');
 });
 
-<<<<<<< HEAD
-router.get('/viewall', (req, res) => {
-  res.render('employees')
+router.get('/employees', (req,res) => {
+   fetch('/api/employee')
+   .then(response => { return response.json() })
+  
+  const employeeData = {
+    employees: employees
+  }
+  res.render('employees', employeeData);
 })
-=======
+
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
@@ -24,6 +29,5 @@ router.get('/addform', (req, res) => {
   res.render('addform')
 });
 
->>>>>>> 63ac8bcd9b123cc61bbc4659a165b79192c9d675
 
 module.exports = router;
