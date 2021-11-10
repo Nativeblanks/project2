@@ -5,7 +5,8 @@ router.get("/", (req, res) => {
   Employee.findAll({
     attributes: [
       'Firstname',
-      'Lastname'
+      'Lastname',
+      'Title'
     ]
   })
   .then(dbPostData => {
