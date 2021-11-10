@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>Employee Card Tracker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Card Tracker</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
-
-
 <body>
+  <div class="wrapper">
     <header>
+<<<<<<< HEAD
       <div class="wrapper">
       <h2>Welcome to the Employee Card Tracker Database</h2>
       <h4>What would you like to do?</h4>
@@ -33,13 +33,29 @@
             <li><button id="delete-employee">Delete Employee</button><li>
         </ol>  
         </nav>
+=======
+        <a href="/employees">View Employees</a>
+      <nav>
+        {{#if loggedIn}}
+        <a href="/addform">Add Employee</a>
+        <button id="logout" class="btn-no-style">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+>>>>>>> 63ac8bcd9b123cc61bbc4659a165b79192c9d675
     </header>
-
-        <main>
-            {{{body}}}
-        </main>
-      </div>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      Thanks for visiting!
+    </footer>
+  </div>
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 </body>
 
- <script src="/javascript/view-all.js"></script>
 </html>
