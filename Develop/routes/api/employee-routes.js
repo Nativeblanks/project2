@@ -10,10 +10,11 @@ router.get("/", (req, res) => {
     ]
   })
   .then(dbPostData => {
+
     const emps = dbPostData.map(employee => employee.get({ plain: true }));
       console.log(emps[0])
     res.render('employees', {
-      emps});
+
   })
     .catch((err) => {
       console.log(err);
