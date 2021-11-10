@@ -8,18 +8,29 @@
     <title>List</title>
 </head>
 <body>
-    <div class="card">
+    {{!-- <div class="card">
         <img src="" class="card-img-top" />
         <div class="card-body">
           <h5 class="card-title">Card Title</h5>
-          <p class="card-text">
+          <p class="card-text"> --}}
+            <div>
             Full list of employees below
 
             {{#each emps as |emp|}}
+              <div class="card">
+                  <img src="" class="card-img-top" />
+                  <div class="card-body">
+                    <h5 class="card-title">Card Title</h5>
+                    <p class="card-text">
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+          
              <li> {{Firstname}} {{Lastname}} {{Title}}</li>
+             </p>
             {{/each}}
             
-          </p>
+          
+          </div>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>

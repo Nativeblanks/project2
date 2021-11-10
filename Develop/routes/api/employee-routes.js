@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
     const emps = dbPostData.map(employee => employee.get({ plain: true }));
       console.log(emps[0])
     res.render('employees', {
-
+      emps});
   })
     .catch((err) => {
       console.log(err);
@@ -105,4 +105,4 @@ router.delete("/:id", (req, res) => {
     });
 });
 
-module.exports = router;
+module.exports = router
