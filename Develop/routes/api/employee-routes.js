@@ -6,8 +6,17 @@ router.get("/", (req, res) => {
     attributes: [
       'Firstname',
       'Lastname',
-      'Title'
-    ]
+      'Title' ,
+      'Email',
+      'Hiredate',
+      'Phone',
+      'Cell',
+      'Dateofbirth',
+      'Linkedin',
+      'Facebookaccount',
+      'Twitteraccount'
+    ],
+    include: [{ model: Address, attributes: ['Organization', 'Addressline1', 'City', 'State', 'Zip','Phone','Fax']}]
   })
   .then(dbPostData => {
 
