@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
     const emps = dbPostData.map(employee => employee.get({ plain: true }));
       console.log(emps[0])
     res.render('employees', {
-      emps});
+        emps});
   })
     .catch((err) => {
       console.log(err);
