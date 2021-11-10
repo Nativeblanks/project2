@@ -8,4 +8,8 @@ router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
 
 
+router.get("/employee", (req,res) => {
+  res.redirect('/')
+})
+
 module.exports = router;
