@@ -5,6 +5,30 @@ body, html {
   color: #000000;
   background-color: #ffffff;
 }
+
+h1 {font-size: 200%;}
+h2 {font-size: 150%;}
+h3 {font-size: 100%;}
+h4 {font-size: 90%;}
+h5 {font-size: 80%;}
+h6 {font-size: 70%;}
+
+th {
+  background-color: #940000;
+  color:white;
+  font-size: 100%;
+}
+
+td {
+  background-color: white;
+  color: black;
+  font-size: 80%;
+}
+
+.center {
+    text-align: center;
+}
+
 a {
   color: white;
 }
