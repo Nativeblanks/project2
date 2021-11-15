@@ -19,10 +19,11 @@ router.get("/", (req, res) => {
     include: [{ model: Address, attributes: ['Organization', 'Addressline1', 'City', 'State', 'Zip','Phone','Fax']}]
   })
   .then(dbPostData => {
+
     const emps = dbPostData.map(employee => employee.get({ plain: true }));
       console.log(emps[0])
     res.render('employees', {
-      emps});
+        emps});
   })
     .catch((err) => {
       console.log(err);

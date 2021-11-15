@@ -15,7 +15,7 @@ Employee.init(
     , Linkedin: {type: DataTypes.STRING, allowNull: true}
     , Facebookaccount: {type: DataTypes.STRING, allowNull: true}
     , Twitteraccount: {type: DataTypes.STRING, allowNull: true}
-    , Address_id: {type: DataTypes.INTEGER, allowNull: false}
+    , Address_id: {type: DataTypes.INTEGER, allowNull: true}
   }
   ,
   {

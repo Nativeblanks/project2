@@ -30,7 +30,7 @@ td {
 }
 
 a {
-  color: white;
+  color: rgb(109, 111, 238);
 }
 
 a:hover {
@@ -74,6 +74,13 @@ header {
 .myLogin {
   padding: 20pt;
 }
+#home {
+  text-align: center;
+  font-size: larger;
+}
+h1{
+  font-weight: bolder;
+}
 footer {
   background: #ccc;
   padding: 10px;
@@ -90,6 +97,11 @@ footer {
   font-weight: normal;
   vertical-align: middle;
 }
+#bottom-home{
+  position: fixed;
+  bottom: 2em;
+  width: 100%;}
+
 .card {
   flex-direction: row;
   align-items: center;
