@@ -1,0 +1,79 @@
+<section class="myLogin">
+  {{#each emps as |emp|}}
+    <div class="card" style="width:60%;">
+      <div class="card-header">
+        <div class="card-header-title title is-4 card-color">
+          {{Firstname}} {{Lastname}}
+        </div>
+      </div>
+
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure>
+              <img src="https://theorthopedicdestination.com/osi/employees/{{Firstname}}.{{Lastname}}.png">
+            </figure>
+          </div>
+          
+          <div class="media-content">
+            <p class="subtitle is-6">
+              {{#if Title}}
+                {{Title}} 
+                <br>
+              {{/if}}
+
+              {{#if Email}}
+                <i class="far fa-envelope" style="color:black;"></i>
+                <a class="black" mailto:"{{Email}}">{{Email}}</a>
+                <br>
+              {{/if}}
+
+              {{#if Phone}}
+                <i class="fas fa-phone" style="color:black;"></i> {{Phone}}
+                <br>
+              {{/if}}
+
+              {{#if Cell}}
+                <i class="fas fa-mobile"></i> {{Cell}}
+                <br>
+              {{/if}}
+
+              {{#if emp.address.Organization}}
+                <br>
+                <b>{{emp.address.Organization}}</b>
+                <br>{{emp.address.Addressline1}}
+                <br>{{emp.address.City}}, {{emp.address.State}} {{emp.address.Zip}}
+                <br><i class="fas fa-phone" style="color:black;"></i> {{emp.address.Phone}} (main)
+                <br>
+                
+                {{#if emp.address.fax}}
+                  <i class="fas fa-fax" style="color:black;"></i> {{emp.address.Fax}}
+                  <br><br>
+                {{/if}}
+              {{/if}}
+
+
+              {{#if Linkedin}}
+                <i class="fab fa-linkedin" style="color:black;"></i> 
+                <a target="_blank" class="black" href="https://www.linkedin.com/in/{{Linkedin}}">https://www.linkedin.com/in/{{Linkedin}}</a>
+                <br>
+              {{/if}}
+
+              {{#if Facebookaccount}}
+                <i class="fab fa-facebook-square" style="color:black;"></i>
+                <a target="_blank" class="black" href="https://www.facebook.com/in/{{Facebookaccount}}">https://www.facebook.com/in/{{Facebookaccount}}</a>
+              {{/if}}
+
+              <br><br>
+              vCard: <i class="far fa-id-card"></i>              
+              <br>
+              <i class="fas fa-arrow-circle-up"></i>
+              <i class="fas fa-arrow-circle-down"></i>
+              <i class="fas fa-arrow-circle-right"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</section>

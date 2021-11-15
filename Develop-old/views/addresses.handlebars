@@ -1,0 +1,35 @@
+<section class="myLogin">
+    <table>
+        <tr>
+            <th>
+                <a href="/api/address/create"><i class="fas fa-plus" style="color:white;"></i></a>
+                /Edit
+            </th>
+            <th>Organization</th>
+            <th>Address Line 1</th>
+            <th>Address Line 2</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Phone</th>
+            <th>Fax</th>
+        </tr>
+        {{#each add as |address|}}
+            <tr>
+                <td class="center">
+                    <a href="/api/address/{{address.address_id}}">
+                        <i class="fas fa-edit" style="color:#940000;"></i>
+                    </a>
+                </td>
+                <td>{{address.Organization}}</td> 
+                <td>{{address.Addressline1}}</td> 
+                <td>{{address.Addressline2}}</td> 
+                <td>{{address.City}}</td> 
+                <td>{{address.State}}</td> 
+                <td>{{address.Zip}}</td> 
+                <td>{{address.Phone}}</td> 
+                <td>{{address.Fax}}</td>                                                                                                                 
+            </tr>
+        {{/each}}
+  </table>
+</section>

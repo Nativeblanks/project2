@@ -1,0 +1,183 @@
+<section class="myLogin">
+    Add Address...
+
+    <form class="address-form">
+        <div class="field">
+            <label 
+                for="organization" 
+                class="label"
+            >
+                Organization
+            </label>
+
+            <div class="control has-icons-left has-icons-right">
+                <input 
+                id="idOrganization"
+                class="input is-danger" 
+                type="input" 
+                placeholder="Organization"
+                value="{{address.Organization}}"
+                style="width:50%" 
+                >
+            </div>
+        </div>
+
+        <div class="field">
+            <label 
+                for="addressline1" 
+                class="label"
+            >
+                Address Line 1
+            </label>
+
+            <div class="control has-icons-left has-icons-right">
+                <input 
+                id="idAddressline1"
+                class="input is-danger" 
+                type="input" 
+                placeholder="Address Line 1"
+                value="{{address.Addressline1}}"
+                style="width:50%" 
+                >
+            </div>
+        </div>
+
+        <div class="field">
+            <label 
+                for="addressline2" 
+                class="label"
+            >
+                Address Line 2
+            </label>
+
+            <div class="control has-icons-left has-icons-right">
+                <input 
+                id="idAddressline2"
+                class="input is-danger" 
+                type="input" 
+                placeholder="Address Line 2"
+                value="{{address.Addressline2}}"
+                style="width:50%" 
+                >
+            </div>
+        </div>
+
+        <div class="field">
+            <label 
+                for="city" 
+                class="label"
+            >
+                Address Line 2
+            </label>
+
+            <div class="control has-icons-left has-icons-right">
+                <input 
+                id="idCity"
+                class="input is-danger" 
+                type="input" 
+                placeholder="City"
+                value="{{address.City}}"
+                style="width:50%" 
+                >
+            </div>
+        </div>
+
+        <div class="field">
+            <label 
+                for="state" 
+                class="label"
+            >
+                State
+            </label>
+
+            <div class="control has-icons-left has-icons-right">
+                <input 
+                id="idState"
+                class="input is-danger" 
+                type="input" 
+                placeholder="State"
+                value="{{address.State}}"
+                style="width:50%" 
+                >
+            </div>
+        </div>
+
+        <div class="field">
+            <label 
+                for="zip" 
+                class="label"
+            >
+                Zip
+            </label>
+
+            <div class="control has-icons-left has-icons-right">
+                <input 
+                id="idZip"
+                class="input is-danger" 
+                type="input" 
+                placeholder="Zip"
+                value="{{address.Zip}}"
+                style="width:50%" 
+                >
+            </div>
+        </div>
+
+        <div class="field">
+            <label 
+                for="phone" 
+                class="label"
+            >
+                Phone
+            </label>
+
+            <div class="control has-icons-left has-icons-right">
+                <input 
+                id="idPhone"
+                class="input is-danger" 
+                type="input" 
+                placeholder="Phone"
+                value="{{address.Phone}}"
+                style="width:50%" 
+                >
+            </div>
+        </div>
+
+        <div class="field">
+            <label 
+                for="fax" 
+                class="label"
+            >
+                Fax
+            </label>
+
+            <div class="control has-icons-left has-icons-right">
+                <input 
+                id="idFax"
+                class="input is-danger" 
+                type="input" 
+                placeholder="Fax"
+                value="{{address.Fax}}"
+                style="width:50%" 
+                >
+            </div>
+        </div>
+
+        <input 
+            id="idAddressId"
+            type="hidden"
+            name="address_id"
+            value="{{address.address_id}}"
+        />
+
+        <div>
+            <button 
+                class="button is-danger" 
+                type="submit"
+            >
+                <i class="fas fa-sign-in-alt"></i>
+            </button>
+        </div>
+    </form>
+</section>
+
+<script src="/javascript/add-address.js"></script>
