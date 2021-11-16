@@ -1,0 +1,19 @@
+    <div class="card">
+        <img src="" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">Card Title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+            {{#each employeeData}}
+            <li>
+              <p>First Name: {{firstName}}</p>
+              <p>Last Name: {{lastName}}</p>
+              <p>Title: {{title}}</p>
+            </li>
+            {{/each}}
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    

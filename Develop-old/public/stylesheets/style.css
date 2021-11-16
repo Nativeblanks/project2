@@ -1,0 +1,149 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+h1 {font-size: 200%;}
+h2 {font-size: 150%;}
+h3 {font-size: 100%;}
+h4 {font-size: 90%;}
+h5 {font-size: 80%;}
+h6 {font-size: 70%;}
+
+th {
+  background-color: #940000;
+  color:white;
+  font-size: 100%;
+}
+
+td {
+  background-color: white;
+  color: black;
+  font-size: 80%;
+}
+
+.center {
+    text-align: center;
+}
+
+a {
+  color: rgb(109, 111, 238);
+}
+
+a:hover {
+  color: yellow;
+}
+
+a.black {
+  color: black;
+  font-size:smaller;
+}
+
+.card-color {
+  background-image: linear-gradient(to right, #940000, red);  
+  color: white;
+}
+
+a.black:hover {
+  font-weight: bold;
+}
+
+.header-div {
+  color: white;
+}
+.header-text {
+  color: white;
+}
+ol {
+  list-style-type: none;
+}
+li {
+  padding-bottom: 5px;
+}
+header {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-image: linear-gradient(to right, #940000, red);
+}
+.myLogin {
+  padding: 20pt;
+}
+#home {
+  text-align: center;
+  font-size: larger;
+}
+h1{
+  font-weight: bolder;
+}
+footer {
+  background: #ccc;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+.footer-text {
+  font-size: 8pt;
+  font-weight: normal;
+  vertical-align: middle;
+}
+#bottom-home{
+  position: fixed;
+  bottom: 2em;
+  width: 100%;}
+
+.card {
+  flex-direction: row;
+  align-items: center;
+}
+.card-title {
+  font-weight: bold;
+}
+.card img {
+  width: 30%;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: calc(0.25rem - 1px);
+}
+@media only screen and (max-width: 768px) {
+  a {
+    display: none;
+  }
+  .card-body {
+    padding: 0.5em 1.2em;
+  }
+  .card-body .card-text {
+    margin: 0;
+  }
+  .card img {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  a {
+    display: none;
+  }
+  .card-body {
+    padding: 0.5em 1.2em;
+  }
+  .card-body .card-text {
+    margin: 0;
+  }
+  .card img {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .card img {
+    width: 40%;
+  }
+}
