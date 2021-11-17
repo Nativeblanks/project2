@@ -30,6 +30,7 @@ Employee Directory is an application that allows a team member to login with cre
 npm i
 
 ## Usage
+Test it out <a href="https://stormy-plateau-51721.herokuapp.com/"> HERE </a>
 
 This application should be used to organize employee information, Use the link to log-in with proper credentials. Use links on navigation bar to navigate to add employees, view employees, etc. ![image-2](https://user-images.githubusercontent.com/83666696/141711306-904a549a-96a2-4ea1-8574-dfdd293e7811.png)
 ![image-1](https://user-images.githubusercontent.com/83666696/141711326-e97778a1-313d-4d51-9bdb-40fe101e61f0.png)
